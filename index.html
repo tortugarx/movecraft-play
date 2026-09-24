@@ -6,10 +6,17 @@
     <meta name="theme-color" content="#182128" />
     <meta name="description" content="Moving Company Simulator – build your own moving company." />
     <title>MOVECRAFT · From mover to maker</title>
-    <script type="module" crossorigin src="./assets/index-B81Q0nbY.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-rl4CHiBN.css">
+    <style>
+      #loading-screen{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:#e8ecd2;color:#29495a;font:700 18px system-ui,sans-serif;text-align:center}
+      #loading-screen>div{width:min(340px,80vw)}#loading-screen h1{font-size:clamp(30px,7vw,50px);letter-spacing:.08em;margin:0 0 12px}
+      .loading-track{height:12px;border:3px solid #29495a;border-radius:20px;background:#fff6dc;overflow:hidden}
+      .loading-track span{display:block;width:35%;height:100%;background:#ffc95d;border-radius:20px;animation:loading 1.2s ease-in-out infinite alternate}
+      @keyframes loading{to{transform:translateX(190%)}}#loading-screen button{padding:12px 24px;border:3px solid #29495a;border-radius:14px;background:#ffc95d;color:inherit;font:inherit}
+    </style>
+    <script type="module" crossorigin src="./assets/index-C7WUn6dK.js"></script>
   </head>
   <body>
     <div id="app"></div>
+    <div id="loading-screen" role="status" aria-live="polite"><div><h1>MOVECRAFT</h1><p>Loading your moving company…</p><div class="loading-track"><span></span></div></div></div>
   </body>
 </html>
